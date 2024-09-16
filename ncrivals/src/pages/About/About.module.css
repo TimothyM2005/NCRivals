@@ -1,0 +1,39 @@
+.about {
+    padding: 2rem;
+    background-color: #f1faee;
+    color: #1d3557; /* Dark blue text */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .teamMember img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .teamMember p {
+    text-align: center;
+    font-size: 1rem;
+  }
+  

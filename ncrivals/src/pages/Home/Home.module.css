@@ -1,0 +1,30 @@
+.hero {
+    
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .heroContent h1 {
+    font-size: 3rem;
+  }
+  
+  .ctaButton {
+    padding: 1rem 2rem;
+    background-color: #e63946;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .ctaButton:hover {
+    background-color: #d62828;
+  }
+  

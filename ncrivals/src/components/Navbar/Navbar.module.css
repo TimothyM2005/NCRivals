@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #e63946; /* Red tone for the main color */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navLinks li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navLinks li a:hover {
+    color: #f1faee; /* A lighter shade for hover effect */
+  }
+  

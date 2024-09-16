@@ -1,0 +1,34 @@
+.competitions {
+    padding: 2rem;
+    background-color: #e9ecef; /* Light grey */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .competitionList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+  
+  .competitionList li {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

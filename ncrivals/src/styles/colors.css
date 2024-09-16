@@ -1,0 +1,44 @@
+:root {
+    --primary-red: #e63946;        /* Main red for buttons and accents */
+    --primary-hover-red: #d62828;  /* Darker red for hover states */
+    --light-red: #f8d7da;         /* Light red for background accents */
+    --dark-blue: #1d3557;         /* Dark blue for text */
+    --light-blue: #a8dadc;        /* Lighter blue for backgrounds */
+    --white: #ffffff;             /* White for text and backgrounds */
+    --light-gray: #e9ecef;        /* Light gray for backgrounds */
+    --dark-gray: #343a40;         /* Dark gray for footer and text */
+  }
+  
+  body {
+    background-color: var(--light-gray);
+    color: var(--dark-blue);
+    font-family: 'Roboto', sans-serif;  /* You can use Google Fonts */
+  }
+  
+  a {
+    color: var(--primary-red);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--primary-hover-red);
+  }
+  
+  /* Utility classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .bg-white {
+    background-color: var(--white);
+  }
+  
+  .bg-primary {
+    background-color: var(--primary-red);
+  }
+  
+  .bg-dark {
+    background-color: var(--dark-blue);
+  }
+  
+  
