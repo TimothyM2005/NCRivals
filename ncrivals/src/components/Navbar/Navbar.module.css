@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #e63946; /* Red tone for the main color */
+    background-color: #cc0000; /* Red tone for the main color */
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
@@ -27,3 +27,12 @@
     color: #f1faee; /* A lighter shade for hover effect */
   }
   
+  .homebutton {
+    background-color: #35d600;
+    color: #cc0000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }

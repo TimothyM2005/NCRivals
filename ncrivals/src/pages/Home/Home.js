@@ -1,15 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
-function Home() {
+const Home = () => {
   return (
-    <section className={styles.hero}>
-      <div className={styles.heroContent}>
-        <h1>Welcome to NC Rivals</h1>
-        <p>We are a passionate robotics team competing in the Rivals Robotics League.</p>
-        <button className={styles.ctaButton}>Learn More</button>
+    <div className={styles.homeContainer}>
+      <div className={styles.overlay}>
+        <h1 className={styles.title}>Welcome to NC Rivals</h1>
+        <p className={styles.subtitle}>Join us in the journey of building the future of robotics.</p>
+        <Link to="/about" className={styles.learnMoreButton}>Learn More</Link>
       </div>
-    </section>
+      <footer className={styles.footer}>
+        <p>Contact Us:</p>
+        <p>Email: info@ncrivals.com | Phone: (123) 456-7890</p>
+        <p>Follow us on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+      </footer>
+    </div>
   );
 }
 

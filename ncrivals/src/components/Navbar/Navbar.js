@@ -5,7 +5,9 @@ import styles from './Navbar.module.css'; // Using CSS modules for scoped styles
 function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>NC Rivals</div>
+      <Link to="/" className={styles.homeButton}>
+        NC Rivals
+      </Link>
       <ul className={styles.navLinks}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About Us</Link></li>

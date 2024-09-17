@@ -41,4 +41,24 @@
     background-color: var(--dark-blue);
   }
   
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cc0000;
+  /* Red scrollbar to match the theme */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff0000;
+  /* Slightly lighter red on hover */
+}
   
