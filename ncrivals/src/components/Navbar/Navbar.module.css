@@ -1,38 +1,119 @@
+/* Navbar container */
 .navbar {
-    background-color: #cc0000; /* Red tone for the main color */
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    color: white;
+  background-color: #cc0000;
+  /* Main red tone */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Align items vertically */
+  padding: 1rem 2rem;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  position: sticky;
+  /* Stick the navbar to the top */
+  top: 0;
+  z-index: 1000;
+  animation: fadeInDown 0.5s ease;
+  /* Navbar slides down smoothly */
+}
+
+/* Fade-in slide-down effect */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+/* Logo styles */
+.logo {
+  font-size: 1.8rem;
+  /* Slightly larger logo */
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  /* Space between letters */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  /* Subtle shadow for logo */
+}
+
+/* Navigation links container */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  /* Increased gap for spacing */
+}
+
+/* Individual link styles */
+.navLinks li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  /* Slightly larger font for links */
+  transition: color 0.3s ease, transform 0.2s ease;
+  /* Smooth transition for hover */
+}
+
+/* Hover effect on links */
+.navLinks li a:hover {
+  color: #f1faee;
+  /* Lighter color on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect */
+}
+
+/* Home button style */
+.homebutton {
+  background-color: #801515;
+  /* Bright green */
+  color: white;
+  /* White text for contrast */
+  border: none;
+  padding: 0.7rem 1.2rem;
+  /* Increased padding for better feel */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Button transition */
+}
+
+/* Home button hover effect */
+.homebutton:hover {
+  background-color: #494949;
+  /* Darker hover color */
+  transform: scale(1.05);
+  /* Slight zoom effect */
+}
+
+/* Media query for responsive navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items to the left on smaller screens */
+    padding: 1rem;
+  }
+
   .navLinks {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    /* Stack links vertically */
+    gap: 1rem;
+    /* Reduce gap for smaller screens */
   }
-  
-  .navLinks li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .navLinks li a:hover {
-    color: #f1faee; /* A lighter shade for hover effect */
-  }
-  
+
   .homebutton {
-    background-color: #35d600;
-    color: #cc0000;
-    border: none;
+    font-size: 0.9rem;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    /* Adjust button size for smaller screens */
   }
+}

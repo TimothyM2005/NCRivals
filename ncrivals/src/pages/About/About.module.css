@@ -1,39 +1,69 @@
 .about {
-    padding: 2rem;
-    background-color: #f1faee;
-    color: #1d3557; /* Dark blue text */
+  padding: 2rem;
+  background-color: #1d1d1d;
+  /* Dark background to match homepage */
+  color: #f1faee;
+  /* Light text for contrast */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #cc0000;
+  /* Red to match the homepage */
+}
+
+.subheading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f1faee;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f1faee;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.teamMember img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+  border: 4px solid #cc0000;
+  /* Red border for team member photos */
+}
+
+.teamMember p {
+  font-size: 1.1rem;
+  color: #f1faee;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
+
+  .subheading {
+    font-size: 1.5rem;
   }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
+
   .teamGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: 1fr;
   }
-  
-  .teamMember img {
-    width: 100%;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-  }
-  
-  .teamMember p {
-    text-align: center;
-    font-size: 1rem;
-  }
-  
+}

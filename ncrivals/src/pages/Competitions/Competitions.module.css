@@ -1,34 +1,81 @@
+/* Reset margin and padding for body and html */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d1d1d;
+  /* Ensure background color is consistent */
+}
+
+/* Competitions Section */
 .competitions {
-    padding: 2rem;
-    background-color: #e9ecef; /* Light grey */
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .competitionList {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1.1rem;
-  }
-  
-  .competitionList li {
-    background-color: white;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+  padding: 2rem;
+  background-color: #1d1d1d;
+  /* Dark background to match homepage */
+  /* Light text for contrast */
+  min-height: 100vh;
+  /* Ensures full viewport height is covered */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #cc0000;
+  /* Ensures no gap at the bottom */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #cc0000;
+  /* Red accent for titles */
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #cc0000;
+  /* Red accent for subtitles */
+}
+
+.competitionList {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #cc0000;
+}
+
+.competitionList li {
+  background-color: #333;
+  /* Slightly lighter than the background */
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  /* Softer edges */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  /* Deeper shadow for polish */
+  color: #f1faee;
+  /* Light text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.competitionList li:hover {
+  transform: translateY(-5px);
+  /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  /* Enhanced shadow on hover */
+}
+
+/* Footer to ensure no gap at the bottom */
+footer {
+  background-color: #1d1d1d;
+  padding: 1rem 0;
+  text-align: center;
+  color: #f1faee;
+  margin-top: auto;
+  /* Pushes the footer to the bottom */
+}

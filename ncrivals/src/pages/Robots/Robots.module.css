@@ -1,36 +1,56 @@
 .robots {
-    padding: 2rem;
-    background-color: #f1faee;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .robotGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-  
-  .robotCard {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .robotCard img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-  
+  padding: 2rem;
+  background-color: #1d1d1d;
+  /* Dark background to match homepage */
+  color: #f1faee;
+  /* Light text for contrast */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #cc0000;
+  /* Red accent for titles */
+}
+
+.robotGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.robotCard {
+  background-color: #333;
+  /* Slightly lighter than the background */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  /* Softer edges */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  /* Deeper shadow for polish */
+  text-align: center;
+  color: #f1faee;
+  /* Light text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.robotCard:hover {
+  transform: translateY(-5px);
+  /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  /* Enhanced shadow on hover */
+}
+
+.robotCard img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  /* Rounded image corners */
+  margin-bottom: 1rem;
+}

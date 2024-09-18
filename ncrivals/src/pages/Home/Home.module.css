@@ -1,19 +1,109 @@
+/* Container for the home page */
 .homeContainer {
-  background-image: url('../../assets/background.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/background.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  /* Distributes content evenly */
+  justify-content: center;
+  /* Center vertically */
   align-items: center;
+  /* Center horizontally */
   position: relative;
   padding: 0 20px;
   overflow: hidden;
-  /* Ensures no scroll */
+  animation: fadeIn 1s ease;
+  /* Add fade-in effect for page */
 }
 
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Overlay for the content */
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  /* Increased padding for better balance */
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  /* Add shadow for depth */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  /* Content fades in and slides up */
+  display: flex;
+  /* Flexbox layout inside overlay */
+  flex-direction: column;
+  /* Arrange items vertically */
+  justify-content: center;
+  /* Center content vertically */
+  align-items: center;
+  /* Center content horizontally */
+}
+
+/* Animation for sliding up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title styles */
+.title {
+  font-size: 3rem;
+  margin: 0;
+  color: #cc0000;
+  letter-spacing: 2px;
+  /* Add spacing between letters */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  /* Subtle text shadow */
+}
+
+/* Subtitle styles */
+.subtitle {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  /* Add margin for better spacing */
+  color: #cc0000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  /* Subtle text shadow */
+}
+
+/* Learn more button styles */
+.learnMoreButton {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Button transition */
+  font-weight: bold;
+}
+
+.learnMoreButton:hover {
+  background-color: #2c2c2c;
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+}
+
+/* Footer styles */
 .footer {
   background-color: rgba(0, 0, 0, 0.7);
   color: #cc0000;
@@ -24,62 +114,23 @@
   width: 100%;
 }
 
-.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  color: #fff;
-}
-
-.title {
-  font-size: 3rem;
-  margin: 0;
-  color: #cc0000;
-  /* Red title */
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  color: #cc0000;
-  /* Red subtitle */
-}
-
-.learnMoreButton {
-  padding: 10px 20px;
-  background-color: #ff0000;
-  /* Primary red color */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-  /* Bold text */
-}
-
-.learnMoreButton:hover {
-  background-color: #2c2c2c;
-  /* Darker hover color */
-}
-
+/* Footer link styles */
 .footer p,
 .footer a {
   color: #cc0000;
-  /* All footer text and links are red */
   margin: 5px 0;
 }
 
 .footer a {
   text-decoration: none;
   font-weight: bold;
-  /* Make links bold */
 }
 
 .footer a:hover {
   text-decoration: underline;
 }
 
+/* Social links styling in the footer */
 .footer .social-links {
   margin-top: 10px;
   display: flex;
@@ -90,6 +141,7 @@
   margin: 0 10px;
 }
 
+/* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
   .title {
     font-size: 2rem;
@@ -106,6 +158,5 @@
 
   .footer {
     font-size: 0.9rem;
-    /* Slightly smaller footer text for smaller screens */
   }
 }

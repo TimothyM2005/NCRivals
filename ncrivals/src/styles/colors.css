@@ -1,9 +1,6 @@
 :root {
     --primary-red: #e63946;        /* Main red for buttons and accents */
-    --primary-hover-red: #d62828;  /* Darker red for hover states */
-    --light-red: #f8d7da;         /* Light red for background accents */
-    --dark-blue: #1d3557;         /* Dark blue for text */
-    --light-blue: #a8dadc;        /* Lighter blue for backgrounds */
+    --primary-hover-red: #d62828;  /* Darker red for hover states */        /* Light red for background accents */       /* Dark blue for text */      /* Lighter blue for backgrounds */
     --white: #ffffff;             /* White for text and backgrounds */
     --light-gray: #e9ecef;        /* Light gray for backgrounds */
     --dark-gray: #343a40;         /* Dark gray for footer and text */
