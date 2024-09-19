@@ -20,7 +20,7 @@ function About() {
             <p>Ben Caunt</p>
           </div>
           <div className={styles.teamMember}>
-            <img src="/assets/member3.jpg" alt="Lucian Genova" />
+            <img src="/assets/Lucian.jpg" alt="Lucian Genova" />
             <p>Lucian Genova</p>
           </div>
           <div className={styles.teamMember}>

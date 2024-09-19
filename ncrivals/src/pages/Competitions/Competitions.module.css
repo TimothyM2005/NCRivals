@@ -12,21 +12,20 @@ body {
   padding: 2rem;
   background-color: #1d1d1d;
   /* Dark background to match homepage */
-  /* Light text for contrast */
   min-height: 100vh;
-  /* Ensures full viewport height is covered */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: #cc0000;
-  /* Ensures no gap at the bottom */
 }
 
+/* Container for content alignment */
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Headings */
 h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -41,6 +40,7 @@ h3 {
   /* Red accent for subtitles */
 }
 
+/* Competition List */
 .competitionList {
   list-style-type: none;
   padding: 0;
@@ -48,26 +48,47 @@ h3 {
   color: #cc0000;
 }
 
-.competitionList li {
+.competitionCard {
   background-color: #333;
-  /* Slightly lighter than the background */
   padding: 1rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
-  /* Softer edges */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  /* Deeper shadow for polish */
   color: #f1faee;
-  /* Light text */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Smooth hover effect */
+  cursor: pointer;
+  /* Pointer cursor for clickable cards */
 }
 
-.competitionList li:hover {
+.competitionCard:hover {
   transform: translateY(-5px);
-  /* Slight lift effect */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  /* Enhanced shadow on hover */
+}
+
+/* Competition Details */
+.competitionDetails {
+  margin-top: 0.5rem;
+  /* Space between title and details */
+  background-color: #444;
+  /* Slightly different background for details */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  /* Soft edges for details section */
+}
+
+/* Image Gallery */
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.imageGallery img {
+  width: 100px;
+  height: auto;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  /* Softer edges for images */
 }
 
 /* Footer to ensure no gap at the bottom */
@@ -77,5 +98,4 @@ footer {
   text-align: center;
   color: #f1faee;
   margin-top: auto;
-  /* Pushes the footer to the bottom */
 }

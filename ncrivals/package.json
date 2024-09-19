@@ -1,5 +1,6 @@
 {
   "name": "ncrivals",
+  "homepage": "http://www.ncrivals.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
