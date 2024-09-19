@@ -42,7 +42,12 @@
 }
 
 .teamMember img {
-  width: 100%;
+  width: 150px;
+  /* Set uniform width */
+  height: 150px;
+  /* Set uniform height */
+  object-fit: cover;
+  /* Ensure the image maintains aspect ratio while filling the space */
   border-radius: 50%;
   margin-bottom: 0.75rem;
   border: 4px solid #cc0000;

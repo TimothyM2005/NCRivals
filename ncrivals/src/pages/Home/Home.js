@@ -12,7 +12,7 @@ const Home = () => {
       </div>
       <footer className={styles.footer}>
         <p>Contact Us:</p>
-        <p>Email: info@ncrivals.com | Phone: (123) 456-7890</p>
+        <p>Email: info@ncrivals.com | Phone: (919) 691-6754</p>
         <p>Follow us on <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
       </footer>
     </div>
