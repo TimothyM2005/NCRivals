@@ -68,27 +68,39 @@ h3 {
 /* Competition Details */
 .competitionDetails {
   margin-top: 0.5rem;
-  /* Space between title and details */
   background-color: #444;
-  /* Slightly different background for details */
   padding: 1rem;
   border-radius: 0.5rem;
-  /* Soft edges for details section */
+  /* Softer edges for details section */
 }
 
 /* Image Gallery */
 .imageGallery {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem; /* Adds space between images */
   margin-top: 1rem;
+  justify-content: space-around;
 }
 
 .imageGallery img {
-  width: 100px;
-  height: auto;
-  margin-right: 0.5rem;
+  width: 150px; /* Set a consistent width */
+  height: 150px; /* Set a consistent height */
+  object-fit: cover; /* Ensures aspect ratio is preserved while filling the box */
   border-radius: 0.25rem;
   /* Softer edges for images */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Adds a slight shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Upcoming and Past Competitions */
+.upcomingEvents {
+  margin-bottom: 2rem;
+  /* Space between upcoming and past events */
+}
+
+.pastEvents {
+  margin-bottom: 2rem;
 }
 
 /* Footer to ensure no gap at the bottom */
@@ -98,4 +110,5 @@ footer {
   text-align: center;
   color: #f1faee;
   margin-top: auto;
+  /* Pushes the footer to the bottom */
 }

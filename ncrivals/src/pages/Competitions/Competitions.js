@@ -1,24 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Competitions.module.css';
 
 // Reusable CompetitionCard component
 function CompetitionCard({ name, description, images }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
+    setCurrentImageIndex(0); // Reset to the first image when expanding
   };
 
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Auto-slide every 5 seconds when expanded
+  useEffect(() => {
+  }, [isExpanded, images.length]);
+
   return (
-    <li onClick={toggleExpand} className={styles.competitionCard}>
-      {name}
+    <li className={styles.competitionCard}>
+      <div onClick={toggleExpand} className={styles.cardTitle}>
+        {name}
+      </div>
       {isExpanded && (
         <div className={styles.competitionDetails}>
           <p>{description}</p>
-          <div className={styles.imageGallery}>
-            {images.map((image, index) => (
-              <img key={index} src={image} alt={`${name} ${index + 1}`} />
-            ))}
+          <div className={styles.imageGalleryWrapper}>
+            <button className={styles.prevBtn} onClick={prevImage}>
+              ◀
+            </button>
+            <div className={styles.imageGallery}>
+              <img
+                src={images[currentImageIndex]}
+                alt={`${name} ${currentImageIndex + 1}`}
+                className={styles.image}
+              />
+            </div>
+            <button className={styles.nextBtn} onClick={nextImage}>
+              ▶
+            </button>
           </div>
         </div>
       )}
@@ -41,7 +71,7 @@ function Competitions() {
       images: ['/assets/OCMakerfair1.jpg', '/assets/OCMakerfair2.jpg', '/assets/OCMakerfair3.jpg'],
       type: 'past',
     },
-  ];
+  ]
 
   // Split competitions by type
   const upcomingCompetitions = competitions.filter(comp => comp.type === 'upcoming');
@@ -51,7 +81,7 @@ function Competitions() {
     <section className={styles.competitions}>
       <div className={styles.container}>
         <h2>Competitions</h2>
-        
+
         {/* Upcoming Events */}
         <h3>Upcoming Events</h3>
         <ul className={styles.competitionList}>
