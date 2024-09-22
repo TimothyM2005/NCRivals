@@ -4,14 +4,12 @@ body {
   margin: 0;
   padding: 0;
   background-color: #1d1d1d;
-  /* Ensure background color is consistent */
 }
 
 /* Competitions Section */
 .competitions {
   padding: 2rem;
   background-color: #1d1d1d;
-  /* Dark background to match homepage */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,18 +24,17 @@ body {
 }
 
 /* Headings */
+h2,
+h3 {
+  color: #cc0000;
+}
+
 h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #cc0000;
-  /* Red accent for titles */
 }
 
 h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #cc0000;
-  /* Red accent for subtitles */
 }
 
 /* Competition List */
@@ -48,6 +45,7 @@ h3 {
   color: #cc0000;
 }
 
+/* Competition Card */
 .competitionCard {
   background-color: #333;
   padding: 1rem;
@@ -57,7 +55,6 @@ h3 {
   color: #f1faee;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  /* Pointer cursor for clickable cards */
 }
 
 .competitionCard:hover {
@@ -71,44 +68,88 @@ h3 {
   background-color: #444;
   padding: 1rem;
   border-radius: 0.5rem;
-  /* Softer edges for details section */
+}
+
+/* Image Gallery Wrapper */
+.imageGalleryWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 /* Image Gallery */
 .imageGallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* Adds space between images */
-  margin-top: 1rem;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  /* Ensure it doesn't exceed the container */
 }
 
 .imageGallery img {
-  width: 150px; /* Set a consistent width */
-  height: 150px; /* Set a consistent height */
-  object-fit: cover; /* Ensures aspect ratio is preserved while filling the box */
+  height: 300px;
+  /* Consistent height */
+  width: auto;
+  object-fit: contain;
   border-radius: 0.25rem;
-  /* Softer edges for images */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Adds a slight shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styles */
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 100%;
+  /* Matches button height to the image */
+  background-color: #cc0000;
+  /* Semi-transparent red */
+  color: #f1faee;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.prevBtn:hover,
+.nextBtn:hover {
+  background-color: rgba(170, 0, 0, 0.8);
+  /* Darken on hover */
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+}
+
+/* Positioning the buttons */
+.prevBtn {
+  left: 0;
+  /* Align to the left of the image */
+}
+
+.nextBtn {
+  right: 0;
+  /* Align to the right of the image */
 }
 
 /* Upcoming and Past Competitions */
-.upcomingEvents {
-  margin-bottom: 2rem;
-  /* Space between upcoming and past events */
-}
-
+.upcomingEvents,
 .pastEvents {
   margin-bottom: 2rem;
 }
 
-/* Footer to ensure no gap at the bottom */
+/* Footer */
 footer {
   background-color: #1d1d1d;
   padding: 1rem 0;
   text-align: center;
   color: #f1faee;
   margin-top: auto;
-  /* Pushes the footer to the bottom */
 }

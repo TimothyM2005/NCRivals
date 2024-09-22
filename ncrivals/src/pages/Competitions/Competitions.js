@@ -53,6 +53,7 @@ function CompetitionCard({ name, description, images }) {
         </div>
       )}
     </li>
+
   );
 }
 
@@ -61,13 +62,13 @@ function Competitions() {
   const competitions = [
     {
       name: 'Tidal Tumble - 2024',
-      description: 'Tidal Tumble is an exciting robotics competition where teams compete to complete underwater challenges.',
+      description: 'Tidal Tumble - is an upcomiong event',
       images: ['/assets/tidal1.jpg', '/assets/tidal2.jpg', '/assets/tidal3.jpg'],
       type: 'upcoming',
     },
     {
       name: 'OC Maker Faire - 2024',
-      description: 'The OC Maker Faire event showcased some of the most innovative robotics designs in 2024.',
+      description: 'The OC Maker Faire was our first event with our robot Dash. This was a major learning oppertunity for our team and allowed for us to communicate and colaborate with other teams. In the compeition we placed 3rd in rankings. ',
       images: ['/assets/OCMakerfair1.jpg', '/assets/OCMakerfair2.jpg', '/assets/OCMakerfair3.jpg'],
       type: 'past',
     },
