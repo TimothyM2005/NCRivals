@@ -62,15 +62,21 @@ function Competitions() {
   const competitions = [
     {
       name: 'Tidal Tumble - 2024',
-      description: 'Tidal Tumble - is an upcomiong event',
+      description: 'Tidal Tumble was our Last event of the 2024 Season. Dash came with a lot of upgrades mechanically and was ready to compete. We ended up doing well in this competition and it was a lot of fun.',
       images: ['/assets/tidal1.jpg', '/assets/tidal2.jpg', '/assets/tidal3.jpg'],
-      type: 'upcoming',
+      type: 'past',
     },
     {
       name: 'OC Maker Faire - 2024',
       description: 'The OC Maker Faire was our first event with our robot Dash. This was a major learning oppertunity for our team and allowed for us to communicate and colaborate with other teams. In the compeition we placed 3rd in rankings. ',
       images: ['/assets/OCMakerfair1.jpg', '/assets/OCMakerfair2.jpg', '/assets/OCMakerfair3.jpg'],
       type: 'past',
+    },
+    {
+      name: '2025 Competitions',
+      description: '',
+      images: [],
+      type: 'upcoming',
     },
   ]
 

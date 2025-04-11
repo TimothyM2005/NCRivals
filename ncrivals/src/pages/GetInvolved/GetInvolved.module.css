@@ -39,23 +39,17 @@ h2 {
   /* Smooth hover effect */
 }
 
-.optionCard:hover {
-  transform: translateY(-5px);
-  /* Slight lift effect */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  /* Enhanced shadow on hover */
-}
 
 h3 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  color: #f1faee;
+  color: #faefee;
   /* Consistent light text for subheadings */
 }
 
 p {
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #f1faee;
+  color: #aeafae;
   /* Light text for body copy */
 }

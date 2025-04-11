@@ -16,7 +16,7 @@ function Robots() {
     {
       name: 'Dash V0 - Rival League',       // Robot's name
       imgSrc: '/assets/DashV0.jpg',         // Path to the robot's image
-      description: 'In a four week time period DashV0 was created. This robot has a fully custom Swerve drive system which uses the modious control system and Pi hat',  // Short description of the robot
+      description: 'In four weeks DashV0 was created. This robot has a fully custom Swerve drive system which uses the modious control system and Pi hat. Please read our blog post for more details',  // Short description of the robot
       RobotCode: 'https://github.com/BenCaunt/rival-s1-code/tree/http-new',  // Link to the code repository
       DriverStation: 'https://github.com/jacobvm04/rival-s1-client',
       cadLink: 'https://cad.team-rivals.com/dash-v0'       // Link to the CAD files

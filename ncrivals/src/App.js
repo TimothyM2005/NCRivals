@@ -7,6 +7,8 @@ import Competitions from './pages/Competitions/Competitions';
 import GetInvolved from './pages/GetInvolved/GetInvolved';
 import Contact from './pages/Contact/Contact';
 import Navbar from './components/Navbar/Navbar';
+import Blog from './pages/Blog/Blog';
+import BlogPost from './pages/Blog/DashPost';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/robots" element={<Robots />} />
         <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:postId" element={<BlogPost />} />
       </Routes>
     </div>
   );
