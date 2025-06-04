@@ -3,7 +3,7 @@
 
 .about {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--penn-red) 0%, var(--jet) 50%, var(--platinum) 100%);
+  background: linear-gradient(135deg, var(--darkest-red) 0%, var(--accent-color) 50%, var(--secondary-color) 100%);
   font-family: 'Inter', sans-serif;
   position: relative;
   overflow-x: hidden;
@@ -40,10 +40,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--seasalt) 0%, var(--platinum) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--seasalt);
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   letter-spacing: -1px;
 }
@@ -109,10 +106,7 @@
   font-size: clamp(2.2rem, 4vw, 2.8rem);
   font-weight: 800;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, var(--seasalt) 0%, var(--platinum) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--seasalt);
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   letter-spacing: -1px;
 }
@@ -163,10 +157,11 @@
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
   border: 3px solid var(--seasalt);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  display: block;
 }
 
 .teamMember:hover img {
@@ -198,36 +193,41 @@
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 100px;
+  box-shadow: var(--shadow-dark);
 }
 
 .linkedinButton {
-  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
-  color: white;
-  box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+  background: #182825; /* Solid gunmetal background to match homepage */
+  color: #ffffff; /* White text */
+  border: 2px solid var(--pacific-cyan);
 }
 
 .linkedinButton:hover {
-  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
+  background: var(--azul); /* Solid blue background on hover */
+  border-color: var(--pacific-cyan);
+  color: #ffffff; /* White text */
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(153, 1, 0, 0.4);
+  box-shadow: 0 8px 30px rgba(34, 174, 209, 0.4);
 }
 
 .portfolioButton {
-  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
-  color: var(--seasalt);
-  box-shadow: 0 4px 15px rgba(153, 1, 0, 0.3);
+  background: #182825; /* Solid gunmetal background to match homepage */
+  color: #ffffff; /* White text */
+  border: 2px solid var(--khaki);
 }
 
 .portfolioButton:hover {
-  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
+  background: var(--air-force-blue); /* Lighter blue background on hover */
+  border-color: var(--khaki);
+  color: #ffffff; /* White text */
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(51, 51, 51, 0.4);
+  box-shadow: 0 8px 30px rgba(175, 169, 141, 0.4);
 }
 
 /* Stats Section */

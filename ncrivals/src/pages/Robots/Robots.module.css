@@ -36,14 +36,11 @@
   animation: fadeInUp 0.8s ease forwards;
 }
 
-h2 {
+.header h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--cream) 0%, var(--secondary-color) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff !important; /* Direct white color with important to override global styles */
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   letter-spacing: -1px;
   text-align: center;
@@ -308,20 +305,24 @@ h2 {
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
-  background: rgba(253, 240, 213, 0.1);
-  border: 1px solid rgba(253, 240, 213, 0.3);
-  color: var(--cream);
+  background: #182825; /* Solid gunmetal background to match homepage */
+  border: 2px solid var(--pacific-cyan); /* Pacific cyan border */
+  color: #ffffff; /* White text */
   padding: 0.625rem;
   border-radius: 10px;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;
   cursor: pointer;
+  box-shadow: var(--shadow-dark);
 }
 
 .expandButton:hover {
-  background: rgba(253, 240, 213, 0.2);
-  border-color: var(--secondary-color);
+  background: var(--azul); /* Solid blue background on hover */
+  border-color: var(--pacific-cyan);
+  color: #ffffff; /* White text */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(34, 174, 209, 0.4);
 }
 
 .expandIcon {
@@ -365,36 +366,49 @@ h2 {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.25rem;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--darkest-red) 100%);
-  color: var(--cream);
+  background: #182825; /* Solid gunmetal background to match homepage */
+  color: #ffffff; /* White text */
   text-decoration: none;
   border-radius: 10px;
   font-weight: 600;
   font-size: 0.875rem;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-dark);
+  border: 2px solid var(--pacific-cyan);
 }
 
 .actionButton:hover {
-  background: linear-gradient(135deg, var(--darkest-red) 0%, #4a0000 100%);
+  background: var(--azul); /* Solid blue background on hover */
+  border-color: var(--pacific-cyan);
+  color: #ffffff; /* White text */
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(193, 18, 31, 0.4);
+  box-shadow: 0 8px 30px rgba(34, 174, 209, 0.4);
 }
 
 .actionButton:nth-child(2) {
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--darkest-red) 100%);
+  background: #182825; /* Solid gunmetal background to match homepage */
+  border: 2px solid var(--khaki);
+  color: #ffffff; /* White text */
 }
 
 .actionButton:nth-child(2):hover {
-  background: linear-gradient(135deg, #002a3b 0%, #5a0000 100%);
+  background: var(--air-force-blue); /* Lighter blue background on hover */
+  border-color: var(--khaki);
+  color: #ffffff; /* White text */
+  box-shadow: 0 8px 30px rgba(175, 169, 141, 0.4);
 }
 
 .actionButton:nth-child(3) {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  background: #182825; /* Solid gunmetal background to match homepage */
+  border: 2px solid var(--gunmetal);
+  color: #ffffff; /* White text */
 }
 
 .actionButton:nth-child(3):hover {
-  background: linear-gradient(135deg, #4a7a9a 0%, #002a3b 100%);
+  background: var(--gunmetal); /* Darker background on hover */
+  border-color: var(--gunmetal);
+  color: #ffffff; /* White text */
+  box-shadow: 0 8px 30px rgba(24, 40, 37, 0.4);
 }
 
 .buttonIcon {

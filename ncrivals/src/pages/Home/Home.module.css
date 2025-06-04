@@ -1,13 +1,32 @@
 /* Import modern fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+/* Ensure no overflow on page load */
+:global(html) {
+  overflow-x: hidden !important;
+  background: var(--darkest-red) !important;
+}
+
+:global(body) {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  font-family: 'Inter', sans-serif;
+  overflow-y: scroll !important; /* Force consistent scrollbar to prevent layout shifts */
+  background: var(--darkest-red) !important;
+  margin: 0;
+  padding: 0;
+}
+
 /* Container for the home page */
 .homeContainer {
-  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 30%, var(--jet) 70%, var(--platinum) 100%);
+  background: linear-gradient(135deg, var(--darkest-red) 0%, var(--accent-color) 50%, var(--secondary-color) 100%);
   min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   position: relative;
+  overflow-y: hidden !important; /* DO NOT REMOVE */
+  width: 100%;
+  max-width: 100%; /* Prevent width overflow */
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
 
 .homeContainer::before {
@@ -24,7 +43,7 @@
 
 /* Hero Section */
 .heroSection {
-  min-height: 100vh;
+  min-height: calc(100vh - 70px); /* Account for navbar height */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,6 +51,9 @@
   position: relative;
   z-index: 1;
   animation: fadeInUp 0.8s ease forwards;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Hero Content */
@@ -39,6 +61,8 @@
   flex: 1;
   max-width: 600px;
   z-index: 2;
+  contain: layout style; /* Prevent layout shifts */
+  will-change: transform, opacity; /* Optimize for animations */
 }
 
 .badge {
@@ -53,6 +77,7 @@
   font-weight: 500;
   margin-bottom: 1.5rem;
   animation: slideInLeft 0.6s ease 0.2s both;
+  will-change: transform, opacity;
 }
 
 .title {
@@ -63,10 +88,8 @@
   line-height: 1.1;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   animation: slideInLeft 0.6s ease 0.4s both;
-  background: linear-gradient(135deg, var(--seasalt) 0%, var(--platinum) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  will-change: transform, opacity;
+  contain: layout; /* Prevent text reflow issues */
 }
 
 .subtitle {
@@ -76,6 +99,7 @@
   margin-bottom: 2.5rem;
   font-weight: 400;
   animation: slideInLeft 0.6s ease 0.6s both;
+  will-change: transform, opacity;
 }
 
 /* Button Group */
@@ -84,6 +108,8 @@
   gap: 1rem;
   flex-wrap: wrap;
   animation: slideInLeft 0.6s ease 0.8s both;
+  will-change: transform, opacity;
+  contain: layout; /* Prevent button reflow */
 }
 
 .primaryButton,
@@ -101,31 +127,33 @@
 }
 
 .primaryButton {
-  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
-  color: var(--seasalt);
+  background: #182825; /* Solid gunmetal background to match navbar */
+  color: #ffffff; /* White text */
   box-shadow: var(--shadow-dark);
-  border: 2px solid rgba(246, 246, 246, 0.3);
+  border: 2px solid var(--pacific-cyan);
 }
 
 .primaryButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(51, 51, 51, 0.5);
-  background: linear-gradient(135deg, var(--jet) 0%, var(--engineering-orange) 100%);
-  border-color: var(--seasalt);
+  box-shadow: 0 8px 30px rgba(34, 174, 209, 0.4);
+  background: var(--azul); /* Solid blue background on hover */
+  border-color: var(--pacific-cyan);
+  color: #ffffff; /* White text */
 }
 
 .secondaryButton {
-  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
-  color: var(--seasalt);
+  background: #182825; /* Solid gunmetal background to match navbar */
+  color: #ffffff; /* White text */
   box-shadow: var(--shadow-dark);
-  border: 2px solid rgba(246, 246, 246, 0.3);
+  border: 2px solid var(--khaki);
 }
 
 .secondaryButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(51, 51, 51, 0.5);
-  background: linear-gradient(135deg, var(--jet) 0%, var(--engineering-orange) 100%);
-  border-color: var(--seasalt);
+  box-shadow: 0 8px 30px rgba(175, 169, 141, 0.4);
+  background: var(--air-force-blue); /* Lighter blue background on hover */
+  border-color: var(--khaki);
+  color: #ffffff; /* White text */
 }
 
 /* Hero Visual */
@@ -136,6 +164,8 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  contain: layout style; /* Changed from strict to allow floating elements */
+  overflow: visible; /* Allow floating elements to show */
 }
 
 .robotImagePlaceholder {
@@ -147,6 +177,8 @@
   justify-content: center;
   animation: float 3s ease-in-out infinite;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  will-change: transform;
+  contain: layout style;
 }
 
 .robotImage {
@@ -183,6 +215,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: visible; /* Allow floating bubbles to be visible */
+  pointer-events: none;
 }
 
 .floatingElement {
@@ -192,6 +226,7 @@
   animation: floatingBubbles ease-in-out infinite;
   opacity: 0.6;
   filter: blur(0.5px);
+  will-change: transform;
 }
 
 .floatingElement:nth-child(1) {
@@ -386,35 +421,35 @@
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translate3d(-5px, 0, 0); /* Reduced from -15px to prevent overflow */
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translate3d(0, 0px, 0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translate3d(0, -20px, 0);
   }
 }
 
 @keyframes floatingBubbles {
   0%, 100% {
-    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+    transform: translate3d(0px, 0px, 0) rotate(0deg) scale(1);
   }
   25% {
-    transform: translateY(-15px) translateX(8px) rotate(90deg) scale(1.05);
+    transform: translate3d(3px, -8px, 0) rotate(90deg) scale(1.05);
   }
   50% {
-    transform: translateY(-25px) translateX(-5px) rotate(180deg) scale(0.95);
+    transform: translate3d(-2px, -12px, 0) rotate(180deg) scale(0.95);
   }
   75% {
-    transform: translateY(-10px) translateX(12px) rotate(270deg) scale(1.02);
+    transform: translate3d(5px, -4px, 0) rotate(270deg) scale(1.02);
   }
 }
 

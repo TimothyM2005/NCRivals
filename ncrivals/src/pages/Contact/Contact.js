@@ -187,8 +187,8 @@ function Contact() {
 
           {/* Contact Form */}
           <div className={styles.formSection}>
-            <h2 className={styles.sectionTitle}>Send Us a Message</h2>
             <div className={styles.formWrapper}>
+              <h2 className={styles.sectionTitle}>Send Us a Message</h2>
               <form className={styles.contactForm} onSubmit={handleSubmit}>
                 <div className={styles.formGroup}>
                   <label htmlFor="name">Full Name</label>

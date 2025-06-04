@@ -45,10 +45,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--cream) 0%, var(--secondary-color) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--cream);
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   letter-spacing: -1px;
   line-height: 1.1;
@@ -325,11 +322,11 @@
 
 .submitButton {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--darkest-red) 100%);
-  color: var(--cream);
+  background: #182825; /* Solid gunmetal background to match homepage */
+  color: #ffffff; /* White text */
   font-size: 1rem;
   font-weight: 600;
-  border: none;
+  border: 2px solid var(--pacific-cyan);
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -340,7 +337,7 @@
   margin-top: 1rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-dark);
 }
 
 .submitButton::before {
@@ -350,13 +347,15 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(253, 240, 213, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s;
 }
 
 .submitButton:hover {
-  background: linear-gradient(135deg, var(--darkest-red) 0%, #4a0000 100%);
-  box-shadow: 0 8px 25px rgba(193, 18, 31, 0.4);
+  background: var(--azul); /* Solid blue background on hover */
+  border-color: var(--pacific-cyan);
+  color: #ffffff; /* White text */
+  box-shadow: 0 8px 30px rgba(34, 174, 209, 0.4);
   transform: translateY(-2px);
 }
 

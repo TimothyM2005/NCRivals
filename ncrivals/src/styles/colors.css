@@ -41,6 +41,15 @@
   --black: #780116;            /* Maps to burgundy as darkest color */
   --rosewood: #780116;         /* Maps to burgundy */
   
+  /* Military color variables that were missing - now mapped to warm palette */
+  --pacific-cyan: #3a4a47; /* Lighter gunmetal for primary button borders */
+  --azul: #d8572a;             /* Maps to flame for hover states */
+  --gunmetal: #780116;         /* Maps to burgundy for dark backgrounds */
+  --khaki: #4a5a57; /* Medium gunmetal for secondary button borders */
+  --air-force-blue: #c32f27;   /* Maps to fire-engine-red for mid-tone */
+  --button-background: #182825; /* Gunmetal button background color */
+  --navbar-background: #182825; /* Gunmetal navbar background color */
+  
   /* Glass and shadow effects */
   --glass-bg: rgba(247, 181, 56, 0.1);
   --glass-border: rgba(247, 181, 56, 0.2);
@@ -48,10 +57,22 @@
   --shadow-dark: 0 4px 20px rgba(120, 1, 22, 0.3);
 }
 
+/* Global overflow control to prevent double scrollbars */
+html {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 body {
   background-color: var(--seasalt);
   color: var(--burgundy);
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -138,11 +159,11 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--flame);
+  background-color: var(--pacific-cyan);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--fire-engine-red);
+  background-color: var(--azul);
 }
   

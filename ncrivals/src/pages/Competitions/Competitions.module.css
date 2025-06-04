@@ -12,7 +12,7 @@ body {
 /* Competitions Section */
 .competitions {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--penn-red) 0%, var(--jet) 50%, var(--platinum) 100%);
+  background: linear-gradient(135deg, var(--darkest-red) 0%, var(--accent-color) 50%, var(--secondary-color) 100%);
   min-height: 100vh;
   color: var(--seasalt);
   font-family: 'Inter', sans-serif;
@@ -227,18 +227,16 @@ h3 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  background: #182825; /* Solid gunmetal background to match homepage */
+  border: 2px solid var(--pacific-cyan);
+  color: #ffffff; /* White text */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(15px);
-  box-shadow: 
-    0 4px 15px rgba(153, 1, 0, 0.3),
-    0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-dark);
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
@@ -258,12 +256,11 @@ h3 {
 }
 
 .navButton:hover {
-  background: linear-gradient(135deg, var(--engineering-orange) 0%, var(--penn-red) 100%);
+  background: var(--azul); /* Solid blue background on hover */
+  border-color: var(--pacific-cyan);
+  color: #ffffff; /* White text */
   transform: scale(1.15);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 
-    0 6px 25px rgba(153, 1, 0, 0.5),
-    0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(34, 174, 209, 0.4);
 }
 
 .navButton:hover::before {
@@ -388,21 +385,20 @@ footer {
 .header {
   text-align: center;
   padding: 4rem 0 2rem;
-  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
+  background: rgba(253, 240, 213, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(253, 240, 213, 0.2);
   color: var(--text-white);
   margin-bottom: 3rem;
   border-radius: 16px;
-  box-shadow: var(--shadow-dark);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 
 .header h1 {
   margin: 0;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  background: linear-gradient(135deg, var(--seasalt) 0%, var(--platinum) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .subtitle {
@@ -410,6 +406,7 @@ footer {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   opacity: 0.9;
   font-weight: 400;
+  color: #ffffff;
 }
 
 .content {
