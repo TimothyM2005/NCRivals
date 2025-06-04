@@ -1,122 +1,708 @@
+/* Import modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 .robots {
-  padding: 2rem;
-  background-color: #1d1d1d;
-  /* Dark background to match homepage */
-  color: #cc0000;
-  /* Light text for contrast */
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--darkest-red) 0%, var(--accent-color) 50%, var(--secondary-color) 100%);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.robots::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/background.jpg') center/cover;
+  opacity: 0.05;
+  z-index: 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #cc0000;
-  /* Red accent for titles */
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px;
   text-align: center;
 }
 
+.subtitle {
+  font-size: 1rem;
+  color: var(--cream);
+  opacity: 0.9;
+  max-width: 500px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.5;
+}
+
+/* Stats Bar */
+.statsBar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.statItem {
+  text-align: center;
+  background: rgba(253, 240, 213, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(253, 240, 213, 0.2);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  min-width: 100px;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 0.25rem;
+  text-shadow: 0 2px 10px rgba(102, 155, 188, 0.3);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--cream);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Robot Grid */
 .robotGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  /* Wider cards for more space */
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  animation: fadeInUp 0.8s ease 0.4s both;
+  justify-items: center;
 }
 
 .robotCard {
-  background-color: #333;
-  /* Slightly lighter than the background */
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  /* Softer edges */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  /* Deeper shadow for polish */
-  text-align: center;
-  color: #f1faee;
-  /* Light text */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Smooth hover effect */
+  background: rgba(253, 240, 213, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(253, 240, 213, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+}
+
+.robotCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(253, 240, 213, 0.1), transparent);
+  transition: left 0.6s;
+  z-index: 1;
+}
+
+.robotCard:hover::before {
+  left: 100%;
 }
 
 .robotCard:hover {
-  transform: translateY(-5px);
-  /* Slight lift effect */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  /* Enhanced shadow on hover */
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(253, 240, 213, 0.4);
+}
+
+.robotCard.expanded {
+  transform: translateY(-4px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Robot Image Container */
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Coming Soon Styling */
+.comingSoon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(102, 155, 188, 0.3) 0%, rgba(139, 69, 19, 0.3) 100%);
+  position: relative;
+}
+
+.comingSoon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(253, 240, 213, 0.1) 10px,
+    rgba(253, 240, 213, 0.1) 20px
+  );
+  animation: slidePattern 3s linear infinite;
+}
+
+.comingSoon span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(253, 240, 213, 0.3);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+@keyframes slidePattern {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
 }
 
 .robotCard img {
   width: 100%;
-  height: auto;
-  max-height: 250px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 0.5rem;
-  /* Rounded image corners */
-  margin-bottom: 1.5rem;
-  /* Increased spacing below image */
+  transition: transform 0.4s ease;
 }
 
-/* New section for expanded robot details */
+.robotCard:hover img {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.robotCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+/* Robot Badge */
+.robotBadge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--darkest-red) 100%);
+  color: var(--cream);
+  padding: 0.375rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Robot Content */
+.robotContent {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.robotName {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.robotSummary {
+  font-size: 0.9rem;
+  color: var(--cream);
+  opacity: 0.8;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* Quick Info */
+.quickInfo {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(253, 240, 213, 0.2);
+  border-bottom: 1px solid rgba(253, 240, 213, 0.2);
+}
+
+.infoItem {
+  text-align: center;
+}
+
+.infoLabel {
+  font-size: 0.7rem;
+  color: var(--cream);
+  opacity: 0.7;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.infoValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* Expand Button */
+.expandButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: rgba(253, 240, 213, 0.1);
+  border: 1px solid rgba(253, 240, 213, 0.3);
+  color: var(--cream);
+  padding: 0.625rem;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.expandButton:hover {
+  background: rgba(253, 240, 213, 0.2);
+  border-color: var(--secondary-color);
+}
+
+.expandIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.expandIcon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Robot Details (Expanded) */
 .robotDetails {
-  margin-top: 1rem;
-  background-color: #222;
-  /* Darker background for details */
-  padding: 1rem;
-  border-radius: 0.5rem;
-  /* Rounded corners for details */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  /* Soft shadow for the details box */
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  background: rgba(253, 240, 213, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(253, 240, 213, 0.2);
+  animation: slideDown 0.4s ease-out;
 }
 
 .robotDetails p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  /* Slightly larger text for the description */
-  color: #f1faee;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  color: var(--cream);
+  opacity: 0.9;
+  line-height: 1.6;
 }
 
-/* Link styling for code and CAD links */
-.robotDetails a {
-  display: block;
-  margin: 0.5rem 0;
-  padding: 0.75rem 1.5rem;
-  background-color: #cc0000;
-  /* Red accent for buttons */
-  color: #f1faee;
-  /* Light text for contrast */
-  border-radius: 0.5rem;
+/* Action Buttons */
+.actionButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--darkest-red) 100%);
+  color: var(--cream);
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  /* Smooth color change on hover */
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
 }
 
-.robotDetails a:hover {
-  background-color: #ff4d4d;
-  /* Lighter red on hover */
+.actionButton:hover {
+  background: linear-gradient(135deg, var(--darkest-red) 0%, #4a0000 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(193, 18, 31, 0.4);
 }
 
-.robotDetails a:not(:last-child) {
-  margin-bottom: 1rem;
-  /* Space between the buttons */
+.actionButton:nth-child(2) {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--darkest-red) 100%);
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-  .robotCard img {
-    max-height: 150px;
-    /* Smaller image on mobile */
+.actionButton:nth-child(2):hover {
+  background: linear-gradient(135deg, #002a3b 0%, #5a0000 100%);
+}
+
+.actionButton:nth-child(3) {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+}
+
+.actionButton:nth-child(3):hover {
+  background: linear-gradient(135deg, #4a7a9a 0%, #002a3b 100%);
+}
+
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
   }
 
-  h2 {
+  .header {
+    padding: 0 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding: 0 0.5rem;
+  }
+
+  .statsBar {
+    gap: 1rem;
+    margin-bottom: 3rem;
+    padding: 0 0.5rem;
+  }
+
+  .statItem {
+    padding: 1.25rem 1rem;
+    min-width: 120px;
+    flex: 1;
+  }
+
+  .statNumber {
     font-size: 2rem;
   }
 
-  .robotDetails a {
+  .statLabel {
+    font-size: 0.9rem;
+  }
+
+  .robotGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .robotCard {
+    margin: 0;
+  }
+
+  .imageContainer {
+    height: 240px;
+  }
+
+  .robotContent {
+    padding: 1.5rem;
+  }
+
+  .robotName {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .robotSummary {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .quickInfo {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .infoItem {
+    padding: 0.75rem;
+  }
+
+  .expandButton {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+    min-height: 44px; /* Better touch target */
+  }
+
+  .robotDetails {
+    padding: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .actionButtons {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .actionButton {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.95rem;
+    min-height: 44px; /* Better touch target */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+    padding: 0 0.25rem;
+  }
+
+  .subtitle {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+
+  .statsBar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .statItem {
     width: 100%;
-    margin: 0.5rem 0;
-    /* Full-width buttons on mobile */
+    max-width: 200px;
+    padding: 1rem 0.75rem;
+  }
+
+  .statNumber {
+    font-size: 1.75rem;
+  }
+
+  .statLabel {
+    font-size: 0.85rem;
+  }
+
+  .robotGrid {
+    gap: 1.5rem;
+    padding: 0 0.25rem;
+  }
+
+  .imageContainer {
+    height: 200px;
+  }
+
+  .robotContent {
+    padding: 1.25rem 1rem;
+  }
+
+  .robotName {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .robotSummary {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .quickInfo {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .infoItem {
+    padding: 0.625rem 0.75rem;
+  }
+
+  .infoLabel {
+    font-size: 0.8rem;
+  }
+
+  .infoValue {
+    font-size: 0.9rem;
+  }
+
+  .expandButton {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .robotDetails {
+    padding: 1rem;
+  }
+
+  .robotDetails p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .actionButtons {
+    gap: 0.5rem;
+  }
+
+  .actionButton {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Enhanced touch interactions for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .robotCard:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .robotCard:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  .expandButton:hover {
+    background: rgba(253, 240, 213, 0.1);
+  }
+
+  .expandButton:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  .actionButton:hover {
+    transform: none;
+  }
+
+  .actionButton:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  .statItem:hover {
+    transform: none;
+  }
+
+  .statItem:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Better focus styles for mobile accessibility */
+@media (max-width: 768px) {
+  .expandButton:focus,
+  .actionButton:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+  }
+
+  /* Improve tap highlighting */
+  .robotCard,
+  .expandButton,
+  .actionButton,
+  .statItem {
+    -webkit-tap-highlight-color: rgba(102, 155, 188, 0.3);
+  }
+}
+
+/* Landscape phone optimization */
+@media (max-width: 896px) and (orientation: landscape) {
+  .container {
+    padding: 1rem;
+  }
+
+  .statsBar {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .statItem {
+    width: auto;
+    min-width: 100px;
+    padding: 0.75rem 1rem;
+  }
+
+  .robotGrid {
+    gap: 1.5rem;
+  }
+
+  .imageContainer {
+    height: 180px;
   }
 }

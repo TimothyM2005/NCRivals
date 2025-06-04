@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './styles/colors.css';
 import './styles/typography.css';
+import './styles/mobile-enhancements.css';
 
 const container = document.getElementById('root');
 

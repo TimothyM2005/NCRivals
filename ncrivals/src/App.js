@@ -8,7 +8,7 @@ import GetInvolved from './pages/GetInvolved/GetInvolved';
 import Contact from './pages/Contact/Contact';
 import Navbar from './components/Navbar/Navbar';
 import Blog from './pages/Blog/Blog';
-import BlogPost from './pages/Blog/DashPost';
+import BlogPosts from './pages/Blog/BlogPosts';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:postId" element={<BlogPost />} />
+        <Route path="/blog/:postId" element={<BlogPosts />} />
       </Routes>
     </div>
   );

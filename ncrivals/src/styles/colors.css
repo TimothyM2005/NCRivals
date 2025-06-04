@@ -1,43 +1,81 @@
 :root {
-    --primary-red: #e63946;        /* Main red for buttons and accents */
-    --primary-hover-red: #d62828;  /* Darker red for hover states */        /* Light red for background accents */       /* Dark blue for text */      /* Lighter blue for backgrounds */
-    --white: #ffffff;             /* White for text and backgrounds */
-    --light-gray: #e9ecef;        /* Light gray for backgrounds */
-    --dark-gray: #343a40;         /* Dark gray for footer and text */
-  }
+  /* New Color Palette */
+  --darkest-red: #780000;      /* Darkest color - primary dark backgrounds */
+  --bright-red: #C1121F;       /* Main red for buttons and accents */
+  --cream: #FDF0D5;            /* Light neutral for backgrounds */
+  --dark-blue: #003049;        /* Dark blue for contrast elements */
+  --light-blue: #669BBC;       /* Light blue for secondary accents */
   
-  body {
-    background-color: var(--light-gray);
-    color: var(--dark-blue);
-    font-family: 'Roboto', sans-serif;  /* You can use Google Fonts */
-  }
+  /* Text Colors */
+  --text-white: #ffffff;       /* White text */
+  --text-black: #000000;       /* Black text */
   
-  a {
-    color: var(--primary-red);
-    text-decoration: none;
-  }
+  /* Legacy variable mappings for compatibility */
+  --primary-red: #C1121F;      /* Maps to bright-red */
+  --primary-hover-red: #780000; /* Maps to darkest-red for hover states */
+  --white: #ffffff;
+  --light-gray: #FDF0D5;       /* Maps to cream */
+  --dark-gray: #003049;        /* Maps to dark-blue */
   
-  a:hover {
-    color: var(--primary-hover-red);
-  }
-  
-  /* Utility classes */
-  .text-center {
-    text-align: center;
-  }
-  
-  .bg-white {
-    background-color: var(--white);
-  }
-  
-  .bg-primary {
-    background-color: var(--primary-red);
-  }
-  
-  .bg-dark {
-    background-color: var(--dark-blue);
-  }
-  
+  /* Glass and shadow effects */
+  --glass-bg: rgba(253, 240, 213, 0.1);
+  --glass-border: rgba(253, 240, 213, 0.2);
+  --shadow-light: 0 8px 32px rgba(120, 0, 0, 0.37);
+  --shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text-black);
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  color: var(--bright-red);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--darkest-red);
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+.text-black {
+  color: var(--text-black);
+}
+
+.bg-white {
+  background-color: var(--text-white);
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.bg-dark-red {
+  background-color: var(--darkest-red);
+}
+
+.bg-bright-red {
+  background-color: var(--bright-red);
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
@@ -45,17 +83,14 @@
 
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
-  /* Background of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #343434;
-  /* Red scrollbar to match the theme */
+  background-color: var(--bright-red);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #4a0000;
-  /* Slightly lighter red on hover */
+  background-color: var(--darkest-red);
 }
   
