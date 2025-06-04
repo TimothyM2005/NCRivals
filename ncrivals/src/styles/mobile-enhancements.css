@@ -78,7 +78,7 @@ img {
 /* Better mobile focus styles */
 @media screen and (max-width: 768px) {
   *:focus {
-    outline: 2px solid var(--secondary-color, #669BBC);
+    outline: 2px solid var(--platinum);
     outline-offset: 2px;
   }
 }
@@ -206,7 +206,7 @@ img {
 /* Better mobile text selection */
 @media screen and (max-width: 768px) {
   ::selection {
-    background: var(--secondary-color, #669BBC);
-    color: white;
+    background: var(--platinum);
+    color: var(--jet);
   }
 } 

@@ -1,16 +1,16 @@
 /* Navbar container */
 .navbar {
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--darkest-red) 100%);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
   /* Dark gradient to match button style */
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* Align items vertically */
   padding: 1rem 2rem;
-  color: var(--cream);
+  color: var(--seasalt);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   /* Stronger shadow for depth */
-  border-bottom: 2px solid rgba(253, 240, 213, 0.2);
+  border-bottom: 2px solid rgba(246, 246, 246, 0.2);
   /* Subtle border for definition */
   position: sticky;
   /* Stick the navbar to the top */
@@ -40,14 +40,14 @@
   font-weight: bold;
   letter-spacing: 1.5px;
   /* Space between letters */
-  color: var(--cream);
+  color: var(--seasalt);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
   /* Stronger shadow for logo */
   transition: color 0.3s ease;
 }
 
 .logo:hover {
-  color: var(--light-blue);
+  color: var(--platinum);
 }
 
 /* Navigation links container */
@@ -62,7 +62,7 @@
 
 /* Individual link styles */
 .navLinks li a {
-  color: var(--cream);
+  color: var(--seasalt);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
@@ -75,28 +75,28 @@
 
 /* Active link styles */
 .navLinks li a.active {
-  color: var(--cream);
-  background: rgba(253, 240, 213, 0.15);
-  border: 1px solid rgba(253, 240, 213, 0.3);
+  color: var(--seasalt);
+  background: rgba(246, 246, 246, 0.15);
+  border: 1px solid rgba(246, 246, 246, 0.3);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover effect on links */
 .navLinks li a:hover {
-  color: var(--cream);
-  background: rgba(253, 240, 213, 0.1);
-  border: 1px solid rgba(253, 240, 213, 0.3);
+  color: var(--seasalt);
+  background: rgba(246, 246, 246, 0.1);
+  border: 1px solid rgba(246, 246, 246, 0.3);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Home button style */
 .homebutton {
-  background: linear-gradient(135deg, var(--darkest-red) 0%, #4a0000 100%);
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
   /* Match secondary button style */
-  color: var(--cream);
+  color: var(--seasalt);
   /* Cream text for contrast */
-  border: 2px solid rgba(253, 240, 213, 0.3);
+  border: 2px solid rgba(246, 246, 246, 0.3);
   padding: 0.75rem 1.5rem;
   /* Increased padding for better feel */
   border-radius: 8px;
@@ -112,19 +112,19 @@
 
 /* Home button hover effect */
 .homebutton:hover {
-  background: linear-gradient(135deg, #002a3b 0%, #5a0000 100%);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--engineering-orange) 100%);
   /* Match primary button hover */
-  border-color: var(--cream);
+  border-color: var(--seasalt);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(120, 0, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(153, 1, 0, 0.4);
 }
 
 /* Home button active state */
 .homebutton.active {
-  background: linear-gradient(135deg, #002a3b 0%, #5a0000 100%);
-  border-color: var(--light-blue);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--engineering-orange) 100%);
+  border-color: var(--platinum);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(120, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(153, 1, 0, 0.3);
 }
 
 /* Mobile menu toggle button (hamburger) */
@@ -144,7 +144,7 @@
 .hamburger {
   width: 2rem;
   height: 0.25rem;
-  background: var(--cream);
+  background: var(--seasalt);
   border-radius: 10px;
   transition: all 0.3s linear;
   position: relative;
@@ -195,7 +195,7 @@
     height: 100vh;
     width: 100%;
     max-width: 300px;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--darkest-red) 100%);
+    background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -218,14 +218,14 @@
     font-size: 1.1rem;
     border-radius: 0;
     border: none;
-    border-bottom: 1px solid rgba(253, 240, 213, 0.1);
+    border-bottom: 1px solid rgba(246, 246, 246, 0.1);
     transition: all 0.3s ease;
   }
 
   .navLinks li a:hover,
   .navLinks li a.active {
-    background: rgba(253, 240, 213, 0.15);
-    border-bottom: 1px solid rgba(253, 240, 213, 0.3);
+    background: rgba(246, 246, 246, 0.15);
+    border-bottom: 1px solid rgba(246, 246, 246, 0.3);
     transform: none;
     box-shadow: none;
   }

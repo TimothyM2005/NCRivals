@@ -3,7 +3,7 @@
 
 .about {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--darkest-red) 0%, var(--accent-color) 50%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--jet) 50%, var(--platinum) 100%);
   font-family: 'Inter', sans-serif;
   position: relative;
   overflow-x: hidden;
@@ -40,7 +40,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--cream) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--seasalt) 0%, var(--platinum) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -51,7 +51,7 @@
 .subheading {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   margin-bottom: 2rem;
-  color: var(--cream);
+  color: var(--seasalt);
   font-weight: 500;
   opacity: 0.9;
   max-width: 800px;
@@ -62,7 +62,7 @@
 .description {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   line-height: 1.8;
-  color: var(--cream);
+  color: var(--seasalt);
   max-width: 900px;
   margin: 0 auto;
   opacity: 0.9;
@@ -71,9 +71,9 @@
 
 /* Mission Section */
 .missionSection {
-  background: rgba(253, 240, 213, 0.1);
+  background: rgba(246, 246, 246, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(253, 240, 213, 0.2);
+  border: 1px solid rgba(246, 246, 246, 0.2);
   border-radius: 20px;
   padding: 3rem 2rem;
   margin: 3rem 0;
@@ -85,14 +85,14 @@
 .missionTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--cream);
+  color: var(--seasalt);
   margin-bottom: 1.5rem;
 }
 
 .missionText {
   font-size: 1.2rem;
   line-height: 1.7;
-  color: var(--cream);
+  color: var(--seasalt);
   opacity: 0.9;
   max-width: 700px;
   margin: 0 auto;
@@ -109,7 +109,7 @@
   font-size: clamp(2.2rem, 4vw, 2.8rem);
   font-weight: 800;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, var(--cream) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--seasalt) 0%, var(--platinum) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -126,9 +126,9 @@
 
 .teamMember {
   text-align: center;
-  background: rgba(253, 240, 213, 0.1);
+  background: rgba(246, 246, 246, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(253, 240, 213, 0.2);
+  border: 1px solid rgba(246, 246, 246, 0.2);
   padding: 2rem 1.5rem;
   border-radius: 20px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -144,7 +144,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(253, 240, 213, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(246, 246, 246, 0.1), transparent);
   transition: left 0.5s;
 }
 
@@ -155,7 +155,7 @@
 .teamMember:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-  border-color: rgba(253, 240, 213, 0.4);
+  border-color: rgba(246, 246, 246, 0.4);
 }
 
 .teamMember img {
@@ -164,21 +164,21 @@
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1.5rem;
-  border: 3px solid var(--cream);
+  border: 3px solid var(--seasalt);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .teamMember:hover img {
   transform: scale(1.05);
-  border-color: var(--secondary-color);
-  box-shadow: 0 12px 35px rgba(102, 155, 188, 0.3);
+  border-color: var(--platinum);
+  box-shadow: 0 12px 35px rgba(232, 232, 232, 0.3);
 }
 
 .memberName {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--cream);
+  color: var(--seasalt);
   margin: 1rem 0 1.5rem 0;
 }
 
@@ -207,27 +207,27 @@
 }
 
 .linkedinButton {
-  background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+  box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
 }
 
 .linkedinButton:hover {
-  background: linear-gradient(135deg, #005885 0%, #004266 100%);
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
+  box-shadow: 0 6px 20px rgba(153, 1, 0, 0.4);
 }
 
 .portfolioButton {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-  color: var(--cream);
-  box-shadow: 0 4px 15px rgba(102, 155, 188, 0.3);
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
+  color: var(--seasalt);
+  box-shadow: 0 4px 15px rgba(153, 1, 0, 0.3);
 }
 
 .portfolioButton:hover {
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 155, 188, 0.4);
+  box-shadow: 0 6px 20px rgba(51, 51, 51, 0.4);
 }
 
 /* Stats Section */

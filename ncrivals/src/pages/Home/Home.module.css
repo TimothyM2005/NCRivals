@@ -1,24 +1,9 @@
 /* Import modern fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* CSS Custom Properties for consistent theming */
-:root {
-  --primary-color: #C1121F;
-  --secondary-color: #669BBC;
-  --accent-color: #003049;
-  --text-light: #ffffff;
-  --text-dark: #000000;
-  --cream: #FDF0D5;
-  --darkest-red: #780000;
-  --glass-bg: rgba(253, 240, 213, 0.15);
-  --glass-border: rgba(253, 240, 213, 0.3);
-  --shadow-light: 0 8px 32px rgba(120, 0, 0, 0.37);
-  --shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
 /* Container for the home page */
 .homeContainer {
-  background: linear-gradient(135deg, var(--darkest-red) 0%, var(--primary-color) 30%, var(--accent-color) 70%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 30%, var(--jet) 70%, var(--platinum) 100%);
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -63,7 +48,7 @@
   border: 1px solid var(--glass-border);
   padding: 8px 16px;
   border-radius: 20px;
-  color: var(--text-light);
+  color: var(--text-white);
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -74,11 +59,11 @@
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 800;
   margin: 0 0 1.5rem 0;
-  color: var(--text-light);
+  color: var(--text-white);
   line-height: 1.1;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   animation: slideInLeft 0.6s ease 0.4s both;
-  background: linear-gradient(135deg, var(--cream) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--seasalt) 0%, var(--platinum) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -87,7 +72,7 @@
 .subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   line-height: 1.6;
-  color: var(--cream);
+  color: var(--seasalt);
   margin-bottom: 2.5rem;
   font-weight: 400;
   animation: slideInLeft 0.6s ease 0.6s both;
@@ -116,31 +101,31 @@
 }
 
 .primaryButton {
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--darkest-red) 100%);
-  color: var(--cream);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
+  color: var(--seasalt);
   box-shadow: var(--shadow-dark);
-  border: 2px solid rgba(253, 240, 213, 0.3);
+  border: 2px solid rgba(246, 246, 246, 0.3);
 }
 
 .primaryButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 48, 73, 0.5);
-  background: linear-gradient(135deg, #002a3b 0%, #5a0000 100%);
-  border-color: var(--cream);
+  box-shadow: 0 8px 30px rgba(51, 51, 51, 0.5);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--engineering-orange) 100%);
+  border-color: var(--seasalt);
 }
 
 .secondaryButton {
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--darkest-red) 100%);
-  color: var(--cream);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--penn-red) 100%);
+  color: var(--seasalt);
   box-shadow: var(--shadow-dark);
-  border: 2px solid rgba(253, 240, 213, 0.3);
+  border: 2px solid rgba(246, 246, 246, 0.3);
 }
 
 .secondaryButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 48, 73, 0.5);
-  background: linear-gradient(135deg, #002a3b 0%, #5a0000 100%);
-  border-color: var(--cream);
+  box-shadow: 0 8px 30px rgba(51, 51, 51, 0.5);
+  background: linear-gradient(135deg, var(--jet) 0%, var(--engineering-orange) 100%);
+  border-color: var(--seasalt);
 }
 
 /* Hero Visual */
@@ -181,7 +166,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: var(--text-light);
+  color: var(--text-white);
   font-weight: 600;
   pointer-events: none;
 }
@@ -202,7 +187,7 @@
 
 .floatingElement {
   position: absolute;
-  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  background: linear-gradient(135deg, var(--platinum), var(--engineering-orange));
   border-radius: 50%;
   animation: floatingBubbles ease-in-out infinite;
   opacity: 0.6;
@@ -289,7 +274,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(253, 240, 213, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(246, 246, 246, 0.2), transparent);
   transition: left 0.5s;
 }
 
@@ -309,14 +294,14 @@
 }
 
 .featureCard h3 {
-  color: var(--text-light);
+  color: var(--text-white);
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .featureCard p {
-  color: var(--cream);
+  color: var(--seasalt);
   line-height: 1.6;
   font-weight: 400;
 }
@@ -350,13 +335,13 @@
 .statNumber {
   font-size: 3rem;
   font-weight: 800;
-  color: var(--cream);
+  color: var(--seasalt);
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 10px rgba(193, 18, 31, 0.3);
+  text-shadow: 0 2px 10px rgba(153, 1, 0, 0.3);
 }
 
 .statLabel {
-  color: var(--text-light);
+  color: var(--text-white);
   font-weight: 500;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -374,7 +359,7 @@
 }
 
 .scrollArrow {
-  color: var(--text-light);
+  color: var(--text-white);
   font-size: 2rem;
   animation: bounce 2s ease-in-out infinite;
   cursor: pointer;

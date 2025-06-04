@@ -1,42 +1,66 @@
 :root {
-  /* New Color Palette */
-  --darkest-red: #780000;      /* Darkest color - primary dark backgrounds */
-  --bright-red: #C1121F;       /* Main red for buttons and accents */
-  --cream: #FDF0D5;            /* Light neutral for backgrounds */
-  --dark-blue: #003049;        /* Dark blue for contrast elements */
-  --light-blue: #669BBC;       /* Light blue for secondary accents */
+  /* New Warm Color Palette */
+  --xanthous: #f7b538;         /* Bright yellow for highlights and accents */
+  --ochre: #db7c26;            /* Orange-brown for secondary elements */
+  --flame: #d8572a;            /* Orange-red for primary buttons */
+  --fire-engine-red: #c32f27;  /* Bright red for important actions */
+  --burgundy: #780116;         /* Dark red for deep backgrounds and text */
+  
+  /* Light colors for contrast */
+  --seasalt: #f6f6f6;          /* Light neutral for backgrounds */
+  --platinum: #e8e8e8;         /* Secondary light background */
+  
+  /* Updated color mappings */
+  --darkest-red: #780116;      /* Maps to burgundy */
+  --bright-red: #c32f27;       /* Maps to fire-engine-red */
+  --cream: #f6f6f6;            /* Maps to seasalt */
+  --dark-blue: #780116;        /* Maps to burgundy for dark elements */
+  --light-blue: #f7b538;       /* Maps to xanthous for accent elements */
   
   /* Text Colors */
   --text-white: #ffffff;       /* White text */
-  --text-black: #000000;       /* Black text */
+  --text-black: #780116;       /* Updated to use burgundy for contrast */
   
   /* Legacy variable mappings for compatibility */
-  --primary-red: #C1121F;      /* Maps to bright-red */
-  --primary-hover-red: #780000; /* Maps to darkest-red for hover states */
+  --primary-red: #c32f27;      /* Maps to fire-engine-red */
+  --primary-hover-red: #780116; /* Maps to burgundy for hover states */
   --white: #ffffff;
-  --light-gray: #FDF0D5;       /* Maps to cream */
-  --dark-gray: #003049;        /* Maps to dark-blue */
+  --light-gray: #f6f6f6;       /* Maps to seasalt */
+  --dark-gray: #780116;        /* Maps to burgundy */
+  
+  /* Additional utility mappings */
+  --primary-color: #d8572a;    /* Maps to flame */
+  --secondary-color: #f7b538;  /* Maps to xanthous */
+  --accent-color: #780116;     /* Maps to burgundy */
+  
+  /* Updated mappings using new warm colors */
+  --penn-red: #c32f27;         /* Maps to fire-engine-red */
+  --engineering-orange: #d8572a; /* Maps to flame */
+  --jet: #780116;              /* Maps to burgundy for dark elements */
+  --battleship-gray: #db7c26;  /* Maps to ochre */
+  --black: #780116;            /* Maps to burgundy as darkest color */
+  --rosewood: #780116;         /* Maps to burgundy */
   
   /* Glass and shadow effects */
-  --glass-bg: rgba(253, 240, 213, 0.1);
-  --glass-border: rgba(253, 240, 213, 0.2);
-  --shadow-light: 0 8px 32px rgba(120, 0, 0, 0.37);
-  --shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --glass-bg: rgba(247, 181, 56, 0.1);
+  --glass-border: rgba(247, 181, 56, 0.2);
+  --shadow-light: 0 8px 32px rgba(195, 47, 39, 0.37);
+  --shadow-dark: 0 4px 20px rgba(120, 1, 22, 0.3);
 }
 
 body {
-  background-color: var(--cream);
-  color: var(--text-black);
+  background-color: var(--seasalt);
+  color: var(--burgundy);
   font-family: 'Inter', sans-serif;
 }
 
 a {
-  color: var(--bright-red);
+  color: var(--flame);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--darkest-red);
+  color: var(--fire-engine-red);
 }
 
 /* Utility classes */
@@ -57,23 +81,51 @@ a:hover {
 }
 
 .bg-cream {
-  background-color: var(--cream);
+  background-color: var(--seasalt);
 }
 
 .bg-dark-red {
-  background-color: var(--darkest-red);
+  background-color: var(--burgundy);
 }
 
 .bg-bright-red {
-  background-color: var(--bright-red);
+  background-color: var(--fire-engine-red);
 }
 
 .bg-dark-blue {
-  background-color: var(--dark-blue);
+  background-color: var(--burgundy);
 }
 
 .bg-light-blue {
-  background-color: var(--light-blue);
+  background-color: var(--xanthous);
+}
+
+.bg-black {
+  background-color: var(--burgundy);
+}
+
+.bg-battleship-gray {
+  background-color: var(--ochre);
+}
+
+.bg-xanthous {
+  background-color: var(--xanthous);
+}
+
+.bg-ochre {
+  background-color: var(--ochre);
+}
+
+.bg-flame {
+  background-color: var(--flame);
+}
+
+.bg-fire-engine-red {
+  background-color: var(--fire-engine-red);
+}
+
+.bg-burgundy {
+  background-color: var(--burgundy);
 }
 
 /* Custom scrollbar styles */
@@ -86,11 +138,11 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--bright-red);
+  background-color: var(--flame);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--darkest-red);
+  background-color: var(--fire-engine-red);
 }
   

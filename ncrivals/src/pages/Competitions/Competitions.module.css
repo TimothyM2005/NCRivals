@@ -6,15 +6,15 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--darkest-red);
+  background-color: var(--penn-red);
 }
 
 /* Competitions Section */
 .competitions {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--darkest-red) 0%, var(--accent-color) 50%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--jet) 50%, var(--platinum) 100%);
   min-height: 100vh;
-  color: var(--cream);
+  color: var(--seasalt);
   font-family: 'Inter', sans-serif;
   position: relative;
   overflow-x: hidden;
@@ -44,7 +44,7 @@ body {
 /* Headings */
 h2,
 h3 {
-  color: #cc0000;
+  color: var(--penn-red);
 }
 
 h2 {
@@ -60,7 +60,7 @@ h3 {
   list-style-type: none;
   padding: 0;
   font-size: 1.1rem;
-  color: #cc0000;
+  color: var(--penn-red);
 }
 
 /* Competition Card */
@@ -112,12 +112,12 @@ h3 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #f1faee;
+  color: var(--seasalt);
   transition: color 0.3s ease;
 }
 
 .cardHeader:hover .cardTitle h3 {
-  color: #ff4444;
+  color: var(--engineering-orange);
 }
 
 .upcomingBadge,
@@ -132,26 +132,26 @@ h3 {
 
 .upcomingBadge {
   background: rgba(34, 197, 94, 0.2);
-  color: #4ade80;
+  color: #22c55e;
   border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
 .pastBadge {
   background: rgba(156, 163, 175, 0.2);
-  color: #9ca3af;
+  color: var(--platinum);
   border: 1px solid rgba(156, 163, 175, 0.3);
 }
 
 .expandIcon {
   width: 24px;
   height: 24px;
-  color: #888;
+  color: var(--platinum);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .expandIcon.rotated {
   transform: rotate(180deg);
-  color: #cc0000;
+  color: var(--penn-red);
 }
 
 .competitionDetails {
@@ -162,7 +162,7 @@ h3 {
 
 .description {
   margin: 0 0 2rem 0;
-  color: #d1d5db;
+  color: var(--platinum);
   line-height: 1.8;
   font-size: 1.05rem;
   letter-spacing: 0.3px;
@@ -170,7 +170,7 @@ h3 {
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
-  border-left: 4px solid #cc0000;
+  border-left: 4px solid var(--penn-red);
 }
 
 .imageSection {
@@ -227,7 +227,7 @@ h3 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #cc0000 0%, #aa0000 100%);
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
   border: 2px solid rgba(255, 255, 255, 0.2);
   color: white;
   display: flex;
@@ -237,7 +237,7 @@ h3 {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(15px);
   box-shadow: 
-    0 4px 15px rgba(204, 0, 0, 0.3),
+    0 4px 15px rgba(153, 1, 0, 0.3),
     0 2px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
@@ -258,11 +258,11 @@ h3 {
 }
 
 .navButton:hover {
-  background: linear-gradient(135deg, #ff2222 0%, #cc0000 100%);
+  background: linear-gradient(135deg, var(--engineering-orange) 0%, var(--penn-red) 100%);
   transform: scale(1.15);
   border-color: rgba(255, 255, 255, 0.4);
   box-shadow: 
-    0 6px 25px rgba(204, 0, 0, 0.5),
+    0 6px 25px rgba(153, 1, 0, 0.5),
     0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -294,12 +294,12 @@ h3 {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
 }
 
 .dot::before {
@@ -307,39 +307,37 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%);
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #cc0000;
-  transition: transform 0.3s ease;
+  background: var(--penn-red);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .dot:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.5);
+  border-color: var(--penn-red);
+  transform: scale(1.2);
 }
 
 .dot.activeDot {
-  border-color: #cc0000;
-  background: rgba(204, 0, 0, 0.2);
-  transform: scale(1.3);
-  box-shadow: 0 2px 8px rgba(204, 0, 0, 0.4);
+  background: var(--penn-red);
+  border-color: var(--seasalt);
+  transform: scale(1.1);
 }
 
 .dot.activeDot::before {
-  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .comingSoon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 2rem;
-  color: #888;
+  text-align: center;
+  color: var(--platinum);
   font-style: italic;
+  font-size: 1.1rem;
+  padding: 3rem 2rem;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
   border: 2px dashed rgba(255, 255, 255, 0.1);
@@ -381,35 +379,37 @@ h3 {
 
 /* Footer */
 footer {
-  background-color: #1d1d1d;
-  padding: 1rem 0;
+  background-color: var(--jet);
+  padding: 2rem 0;
   text-align: center;
-  color: #f1faee;
-  margin-top: auto;
+  color: var(--seasalt);
 }
 
 .header {
   text-align: center;
-  margin-bottom: 4rem;
+  padding: 4rem 0 2rem;
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
+  color: var(--text-white);
+  margin-bottom: 3rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-dark);
 }
 
 .header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #cc0000 0%, #ff4444 100%);
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--seasalt) 0%, var(--platinum) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-weight: 700;
-  letter-spacing: -1px;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: #b0b0b0;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 1rem 0 0 0;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  opacity: 0.9;
+  font-weight: 400;
 }
 
 .content {
@@ -433,7 +433,7 @@ footer {
 
 .sectionHeader h2 {
   font-size: 2rem;
-  color: #f1faee;
+  color: var(--seasalt);
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -445,11 +445,11 @@ footer {
   width: 28px;
   height: 28px;
   stroke-width: 2;
-  color: #cc0000;
+  color: var(--penn-red);
 }
 
 .sectionCount {
-  background: linear-gradient(135deg, #cc0000 0%, #aa0000 100%);
+  background: linear-gradient(135deg, var(--penn-red) 0%, var(--engineering-orange) 100%);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
